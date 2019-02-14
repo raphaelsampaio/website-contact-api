@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/raphaelsampaio/api/issues"
   },
-  "homepage": "https://github.com/raphaelsampaio/api#readme"
+  "homepage": "https://github.com/raphaelsampaio/api#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
