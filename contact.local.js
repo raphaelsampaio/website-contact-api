@@ -14,8 +14,6 @@ var reqlog = morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP
 var log = bunyan.createLogger({name: "contact"});
 
 aws.config.update({region: 'us-west-2'});
-var credentials = new aws.SharedIniFileCredentials({profile: 'default'});
-aws.config.credentials = credentials;
 
 var corsOptions = {
     origin: 'https://raphaelsampaio.com',
