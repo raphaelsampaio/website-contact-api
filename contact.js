@@ -21,7 +21,13 @@ var corsOptions = {
 }
 
 var validBody = function(body) {
-    return (!!body && !!body.email && !!body.name && !!body.subject && !!body.message)
+    return (
+        !!body && 
+        !!body.email && 
+        !!body.name && 
+        !!body.subject && 
+        !!body.message
+    )
 }
 
 var validRequest = function(req) {
@@ -33,7 +39,7 @@ var buildSESRequest = function(replyTo, name, subject, message) {
     log.info('buildSESRequest called with' + [replyTo, name, subject, message].join(';'))
     return {
         Destination: {
-            ToAddresses: ['raphaelsampaio@gmail.com']
+            ToAddresses: [process.env.EMAIL_DESTINATION]
         },
         Message: {
             Body: {
@@ -47,7 +53,7 @@ var buildSESRequest = function(replyTo, name, subject, message) {
                 Data: subject
             }
         },
-        Source: 'mailbot@raphaelsampaio.com',
+        Source: process.env.EMAIL_SOURCE,
         ReplyToAddresses: [replyTo]
     }
 }
