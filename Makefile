@@ -10,4 +10,3 @@ deploy:
 
 clean:
 	rm contact.js
-	rm lambda.js
