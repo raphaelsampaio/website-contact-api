@@ -6,7 +6,7 @@ build:
 	echo 'module.exports = app' >> contact.js
 
 deploy: 
-	claudia update
+	claudia update --profile admin --runtime nodejs12.x
 
 clean:
 	rm contact.js
