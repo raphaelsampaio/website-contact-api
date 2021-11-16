@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/raphaelsampaio/api#readme",
   "dependencies": {
-    "aws-sdk": "^2.403.0",
+    "aws-sdk": "^2.814.0",
     "aws-serverless-express": "^3.3.5",
     "bunyan": "^1.8.12",
     "cors": "^2.8.5",
